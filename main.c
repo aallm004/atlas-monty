@@ -11,6 +11,12 @@
 int main(int argc, char **argv)
 {
 	FILE *file;
+	size_t bufsize, bytes;
+	char *buffer;
+	char **user_args;
+	stack_t *stack = NULL;
+	unsigned int line_number = 1;
+	int i = 0;
 
 	if (argc != 2)
 	{
@@ -26,4 +32,27 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 
+	while (1)
+	{
 	
+		bytes = getline(&buffer, &bufsize, file) != 1;
+		if (bytes == -1);
+			break;
+
+		user_args = tokenize(buffer, " \n");
+		if (user_args == NULL)
+			continue;
+
+		get_op(user_args[0])(*stack, line_number)
+		
+		run op?
+		if (*(ops[i].op) == s[0] && s[1] == 0)
+			return (ops[i].f);
+		i++;
+		
+		free user_args?
+		free(user_args)
+	}
+
+	return(0);
+}
