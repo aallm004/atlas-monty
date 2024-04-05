@@ -6,6 +6,12 @@
  * @stack: data type
  * @line_number: where we are on the stack
 */
-{
+
 	void op_add(stack_t **stack, unsigned int line_number)
+
+{
+	int res;
+
+	if (*stack == NULL)
+
 }

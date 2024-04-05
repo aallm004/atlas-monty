@@ -43,15 +43,9 @@ int main(int argc, char **argv)
 		if (user_args == NULL)
 			continue;
 
-		get_op(user_args[0])(*stack, line_number)
-		
-		run op?
-		if (*(ops[i].op) == s[0] && s[1] == 0)
-			return (ops[i].f);
-		i++;
-		
-		free user_args?
-		free(user_args)
+		get_op(user_args[0])(*stack, line_number);
+
+		free(user_args);
 	}
 
 	return(0);

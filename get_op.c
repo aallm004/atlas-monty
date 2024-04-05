@@ -22,9 +22,10 @@ int (*get_op(char *s))(int, int)
 	};
 	int i = 0;
 
-	while (ops[i].op)
+	while (ops[i].opcode)
 	{
-		if (*(ops[i].op) == s[0] && s[1] == 0)
+		if ((ops[i].opcode[0] == s[0] && ops[i].opcode[0])
+		&& (ops[i].opcode[1] == s[0] && ops[i].opcode[1]))
 			return (ops[i].f);
 		i++;
 	}
