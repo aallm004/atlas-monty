@@ -8,7 +8,7 @@
 */
 void op_pall(stack_t **stack, unsigned int line_number)
 {
-	int count = 0;
+	unsigned int count = 0;
 
 	while (*stack)
 	{
@@ -16,4 +16,5 @@ void op_pall(stack_t **stack, unsigned int line_number)
 		count++;
 		(*stack) = (*stack)->next;
 	}
+	(void)line_number;
 }

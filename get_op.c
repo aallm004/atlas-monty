@@ -8,7 +8,7 @@
  * Return: NULL
  */
 
-int (*get_op(char *s))(int, int)
+void (*get_op(char *s))(stack_t **, unsigned int)
 {
 	instruction_t ops[] = {
 		{"push", op_push},

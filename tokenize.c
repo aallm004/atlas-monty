@@ -32,11 +32,11 @@ char **tokenize(char *str, char *delim)
 		return (NULL);
 
 	/* str has to be a duplicate otherwise things break */	
-	new_str = _strdup(str);
+	new_str = strdup(str);
 	portion = strtok(new_str, delim);
 	while (portion)
 	{
-		array[i] = _strdup(portion);
+		array[i] = strdup(portion);
 		portion = strtok(NULL, delim);
 		i++;
 	}

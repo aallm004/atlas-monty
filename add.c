@@ -10,8 +10,9 @@
 	void op_add(stack_t **stack, unsigned int line_number)
 
 {
-	int res;
-
 	if (*stack == NULL)
+	/*return(void);*/
 
+	(*stack)->n += (*stack)->n;
+	op_pop(stack, line_number);
 }

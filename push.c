@@ -12,13 +12,11 @@ void op_push(stack_t **stack, unsigned int line_number)
 	stack_t *new_node = NULL;
 	
 	if (*stack == NULL)
-		return(NULL);
+		/*return(void);*/
 
 	new_node = malloc(sizeof(stack_t));
 	if (new_node == NULL)
-		fprintf(stderr, "Error: malloc failed\n");
-		exit(EXIT_FAILURE);
-		return (NULL);
+		/*return(void);*/
 
 	new_node->n = line_number;
 	new_node->next = *stack;
@@ -29,5 +27,5 @@ void op_push(stack_t **stack, unsigned int line_number)
 
 	*stack = new_node;
 
-	return(NULL);
+	/*return(void);*/
 }
