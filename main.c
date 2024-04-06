@@ -37,17 +37,17 @@ int main(int argc, char **argv)
 		if (bytes == -1)
 			break;
 
-		user_args = tokenize(buffer, " \n");
+		user_args = tokenize(buffer, "$ \n");
 		if (user_args == NULL)
 			continue;
 
-		get_op(user_args[0])((stack), line_number);
+		get_op(user_args[0])((stack), line_number, user_args);
 
-		free(user_args);
+		free_string_array(user_args);
 	}
 
 	free(buffer);
-	free(stack);
+	free_stack(*stack);
 	fclose(file);
 	return (0);
 }

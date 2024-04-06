@@ -5,8 +5,9 @@
  *
  * @stack: data type
  * @line_number: where we are on the stack
+ * @user_args: tokens from line
 */
-	void op_pint(stack_t **stack, unsigned int line_number)
+	void op_pint(stack_t **stack, unsigned int line_number, char **user_args)
 {
 	if (*stack)
 		printf("%d\n", (*stack)->n);
@@ -15,4 +16,5 @@
 		fprintf(stderr, "L%d: unable to pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
+	(void)user_args;
 }

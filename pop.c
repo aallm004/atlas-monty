@@ -5,8 +5,9 @@
  *
  * @stack: data type
  * @line_number: where we are on the stack
+ * @user_args: tokens from line
 */
-void op_pop(stack_t **stack, unsigned int line_number)
+void op_pop(stack_t **stack, unsigned int line_number, char **user_args)
 {
 	unsigned int pos = 0;
 	stack_t *temp_node = *stack;
@@ -36,5 +37,8 @@ void op_pop(stack_t **stack, unsigned int line_number)
 				temp_node->next->prev = temp_node->prev;
 			free(temp_node);
 			/*return(void);*/
+
+
 		}
+		(void)user_args;
 }
