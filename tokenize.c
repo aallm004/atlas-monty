@@ -43,6 +43,6 @@ char **tokenize(char *str, char *delim)
 	/* NULL added to cap off array of strings */
 	array[i] = NULL;
 	free(new_str);
-
+	free(array);
 	return (array);
 }
