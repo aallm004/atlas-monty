@@ -2,7 +2,7 @@
 
 /**
  * op_pall - prints all the values on the stack, starting from top of stack
- * 
+ *
  * @stack: data type
  * @line_number: where we are on the stack
 */

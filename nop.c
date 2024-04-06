@@ -1,8 +1,8 @@
 #include "monty.h"
 
 /**
- * op_nop: does litcherally nothing
- * 
+ * op_nop - does litcherally nothing
+ *
  * @stack: data type
  * @line_number: where we are on the stack
 */

@@ -1,8 +1,8 @@
 #include "monty.h"
 
 /**
- * op_pint: prints value at top of stack, followed by new line
- * 
+ * op_pint - prints value at top of stack, followed by new line
+ *
  * @stack: data type
  * @line_number: where we are on the stack
 */
@@ -10,8 +10,9 @@
 {
 	if (*stack)
 		printf("%d\n", (*stack)->n);
-	else {
-        fprintf(stderr, "L%d: unable to pint, stack empty\n", line_number);
-        exit(EXIT_FAILURE);
-    }	
+	else
+	{
+		fprintf(stderr, "L%d: unable to pint, stack empty\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 }

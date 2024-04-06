@@ -13,7 +13,7 @@ char **tokenize(char *str, char *delim)
 	char **array;
 	size_t len = 0;
 	int count = 0, i = 0;
-	
+
 	if (!str)
 		return (NULL);
 
@@ -31,7 +31,7 @@ char **tokenize(char *str, char *delim)
 	if (array == NULL)
 		return (NULL);
 
-	/* str has to be a duplicate otherwise things break */	
+	/* str has to be a duplicate otherwise things break */
 	new_str = strdup(str);
 	portion = strtok(new_str, delim);
 	while (portion)

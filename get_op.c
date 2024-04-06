@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * get_op_func - function that selects the correct function
+ * get_op - function that selects the correct function
  *
  * @s: operator passed as argument to program
  *

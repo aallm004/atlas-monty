@@ -1,8 +1,8 @@
 #include "monty.h"
 
 /**
- * op_add: adds the top two elements of the stack
- * 
+ * op_add - adds the top two elements of the stack
+ *
  * @stack: data type
  * @line_number: where we are on the stack
 */
