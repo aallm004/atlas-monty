@@ -26,6 +26,8 @@ void (*get_op(char *s))(stack_t **, unsigned int, char **)
 	{
 		if (strncmp(ops[i].opcode, s, strlen(s)) == 0)
 			return (ops[i].f);
+		if (ops[i + 1].f == NULL)
+			return (Error);
 		i++;
 	}
 

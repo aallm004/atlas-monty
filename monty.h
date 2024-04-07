@@ -50,5 +50,6 @@ void free_string_array(char **str_array);
 void free_stack(stack_t *head);
 int isnumber(char *ptr);
 int _main(int argc, char **argv);
+void Error(stack_t **stack, unsigned int line_number, char **user_args);
 
 #endif
