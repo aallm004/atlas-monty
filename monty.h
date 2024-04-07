@@ -51,5 +51,7 @@ void free_stack(stack_t *head);
 int isnumber(char *ptr);
 int _main(int argc, char **argv);
 void Error(stack_t **stack, unsigned int line_number, char **user_args);
+int delete_node(stack_t **stack);
+void add_node(stack_t **stack, int n, char **user_args);
 
 #endif

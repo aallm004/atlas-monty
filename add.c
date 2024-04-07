@@ -8,11 +8,14 @@
  * @user_args: tokens from line
 */
 
-	void op_add(stack_t **stack, unsigned int line_number, char **user_args)
-
+void op_add(stack_t **stack, unsigned int line_number, char **user_args)
 {
-	if (*stack == NULL)
+	int x, i;
 
-	(*stack)->n += (*stack)->n;
-	op_pop(stack, line_number, user_args);
+	i = delete_node(stack);
+	x = delete_node(stack);
+
+	add_node(stack, x + i, user_args);
+
+	line_number = line_number;
 }

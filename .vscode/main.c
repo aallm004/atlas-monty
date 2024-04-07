@@ -13,6 +13,9 @@
 #include "../swap.c"
 #include "../tokenize.c"
 #include "../error.c"
+#include "../delete_node.c"
+#include "../add_node.c"
+
 
 int main(void)
 {
