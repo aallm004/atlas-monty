@@ -24,11 +24,9 @@ int _main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 	file = fopen(argv[1], "r");
-
 	if (file == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
-		fclose(file);
 		exit(EXIT_FAILURE);
 	}
 	
