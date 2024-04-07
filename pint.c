@@ -13,7 +13,7 @@
 		printf("%d\n", (*stack)->n);
 	else
 	{
-		fprintf(stderr, "L%d: unable to pint, stack empty\n", line_number);
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 		free_string_array(user_args);
 		exit(EXIT_FAILURE);
 	}
