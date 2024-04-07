@@ -12,6 +12,7 @@
 #include "../push.c"
 #include "../swap.c"
 #include "../tokenize.c"
+#include "../error.c"
 
 int main(void)
 {
