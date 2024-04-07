@@ -30,7 +30,7 @@ int _main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 	
-	buffer = malloc(bufsize + 1);
+	buffer = malloc(sizeof(bufsize + 1));
 	if (buffer == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
