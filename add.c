@@ -12,7 +12,7 @@ void op_add(stack_t **stack, unsigned int line_number, char **user_args)
 {
 	int x, i;
 
-	if(*stack && (*stack)->next)
+	if (*stack && (*stack)->next)
 	{
 	i = delete_node(stack);
 	x = delete_node(stack);

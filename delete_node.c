@@ -1,9 +1,9 @@
 #include "monty.h"
 /**
  * delete_node - delete the top
- * 
+ *
  * @stack: stack
- * 
+ *
  * Return: value of the deleted node
 */
 int delete_node(stack_t **stack)

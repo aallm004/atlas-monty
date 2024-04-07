@@ -1,4 +1,5 @@
 #include "monty.h"
+void betty(void);
 /**
  * _main - starting place for monty
  *
@@ -8,6 +9,8 @@
  *
  * Return: 0, 1
 */
+
+
 int _main(int argc, char **argv)
 {
 	FILE *file;
@@ -29,7 +32,7 @@ int _main(int argc, char **argv)
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	
+
 	buffer = malloc(bufsize + 1);
 	if (buffer == NULL)
 	{
@@ -37,7 +40,7 @@ int _main(int argc, char **argv)
 		fclose(file);
 		exit(EXIT_FAILURE);
 	}
-	
+
 	while (1)
 	{
 		line_number++;

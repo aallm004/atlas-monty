@@ -11,7 +11,7 @@ void op_swap(stack_t **stack, unsigned int line_number, char **user_args)
 {
 	int temp;
 
-	if(*stack && (*stack)->next)
+	if (*stack && (*stack)->next)
 	{
 		temp = (*stack)->n;
 		(*stack)->n = (*stack)->next->n;

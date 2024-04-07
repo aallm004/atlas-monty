@@ -1,13 +1,13 @@
 #include "monty.h"
 /**
- * add - adds a node
- * 
+ * add_node - adds a node
+ *
  * @stack: stack
  * @n: new_node
  * @user_args: double pointer
- * 
+ *
  * Return: new node
- * 
+ *
 */
 void add_node(stack_t **stack, int n, char **user_args)
 {
