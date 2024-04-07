@@ -11,7 +11,7 @@ void op_pop(stack_t **stack, unsigned int line_number, char **user_args)
 {
 	stack_t *temp_node = *stack;
 
-	if (stack == NULL)
+	if (*stack == NULL)
 	{
 		fprintf(stderr, "%d: can't pop empty stack\n", line_number);
 		exit(EXIT_FAILURE);

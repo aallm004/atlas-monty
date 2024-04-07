@@ -1,5 +1,4 @@
-pall
-push 1
+pop
 pall
 push 2
 pall
