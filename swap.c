@@ -12,7 +12,6 @@ void op_swap(stack_t **stack, unsigned int line_number, char **user_args)
 	int temp_node;
 
 	if (*stack == NULL)
-	/*return(void);*/
 
 	if ((*stack)->next == NULL)
 	{

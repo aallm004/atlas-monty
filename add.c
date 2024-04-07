@@ -12,7 +12,6 @@
 
 {
 	if (*stack == NULL)
-	/*return(void);*/
 
 	(*stack)->n += (*stack)->n;
 	op_pop(stack, line_number, user_args);
