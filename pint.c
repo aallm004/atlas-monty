@@ -9,7 +9,7 @@
 */
 	void op_pint(stack_t **stack, unsigned int line_number, char **user_args)
 {
-	if (*stack)
+	if (stack)
 		printf("%d\n", (*stack)->n);
 	else
 	{
