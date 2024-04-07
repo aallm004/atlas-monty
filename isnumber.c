@@ -10,7 +10,7 @@ int isnumber(char *ptr)
 {
 	while (*ptr)
 	{
-		if (!isdigit(*ptr))
+		if (!isdigit(*ptr) && (*ptr != '-'))
 			return (0);
 		ptr++;
 	}
