@@ -24,8 +24,7 @@ void (*get_op(char *s))(stack_t **, unsigned int, char **)
 
 	while (ops[i].opcode)
 	{
-		if ((ops[i].opcode[0] == s[0] && ops[i].opcode[0])
-		&& (ops[i].opcode[1] == s[0] && ops[i].opcode[1]))
+		if (strncmp(ops[i].opcode, s, strlen(s)) == 0)
 			return (ops[i].f);
 		i++;
 	}

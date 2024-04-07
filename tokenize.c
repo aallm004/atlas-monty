@@ -29,7 +29,10 @@ char **tokenize(char *str, char *delim)
 	/* make room for pointers to the strings */
 	array = malloc(sizeof(char *) * (count + 1));
 	if (array == NULL)
-		return (NULL);
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
 
 	/* str has to be a duplicate otherwise things break */
 	new_str = strdup(str);
@@ -43,6 +46,6 @@ char **tokenize(char *str, char *delim)
 	/* NULL added to cap off array of strings */
 	array[i] = NULL;
 	free(new_str);
-	free(array);
+
 	return (array);
 }
