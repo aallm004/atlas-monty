@@ -17,12 +17,14 @@ int main(void)
 {
 	int argc;
 	char **argv;
+	int res = 0;
+	char *filename = {"/atlas-monty/bytecode/003.m\0"};
+	char *programName = {".\0"};
 
 	argc = 2;
 	argv = malloc(sizeof(char *));
-	argv[0] = malloc(2);
-	argv[0] = ".\0";
-	argv[1] = malloc(28);
-	argv[1] = "/atlas-monty/bytecode/003.m\0";
-	return(_main(argc, argv));
+	argv[0] = programName;
+	argv[1] = filename;
+	res = _main(argc, argv);
+	return (res);
 }

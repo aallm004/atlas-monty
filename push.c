@@ -16,6 +16,8 @@ void op_push(stack_t **stack, unsigned int line_number, char **user_args)
 	if (new_node == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
+		free_stack(*stack);
+		free_string_array(user_args);
 		exit(EXIT_FAILURE);
 	}
 
@@ -29,16 +31,12 @@ void op_push(stack_t **stack, unsigned int line_number, char **user_args)
 	}
 
 	new_node->n = atoi(user_args[1]);
-	if (stack)
-		new_node->next = *stack;
-	else
-		new_node->next = NULL;
-	new_node->prev = NULL;
+	new_node->next = *stack;
 
-	if ((*stack) != NULL)
+	if (*stack)
 		(*stack)->prev = new_node;
+	else
+		new_node->prev = NULL;
 
 	*stack = new_node;
-
-	/*return(void);*/
 }

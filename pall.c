@@ -9,14 +9,16 @@
 */
 void op_pall(stack_t **stack, unsigned int line_number, char **user_args)
 {
-	unsigned int count = 0;
+	stack_t *temp_node;
 
-	while (*stack)
+	temp_node = *stack;
+
+	while (temp_node)
 	{
-		printf("%d\n", (*stack)->n);
-		count++;
-		(*stack) = (*stack)->next;
+		printf("%d\n", temp_node->n);
+		temp_node = temp_node->next;
 	}
+
 	(void)line_number;
 	(void)user_args;
 }
