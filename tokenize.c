@@ -29,7 +29,6 @@ char **tokenize(char *str, char *delim)
 	/* make room for pointers to the strings */
 	array = malloc(sizeof(char *) * (count + 1));
 	if (array == NULL)
-		return (NULL);
 	{
 		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
