@@ -15,7 +15,7 @@ int _main(int argc, char **argv)
 	char *buffer;
 	char **user_args;
 	stack_t *stack = NULL;
-	unsigned int line_number = 1;
+	unsigned int line_number = 0;
 	int bytes;
 
 	if (argc != 2)
@@ -42,6 +42,8 @@ int _main(int argc, char **argv)
 	
 	while (1)
 	{
+		line_number++;
+
 		bytes = getline(&buffer, &bufsize, file);
 		if (bytes == -1)
 			break;
@@ -53,7 +55,6 @@ int _main(int argc, char **argv)
 		get_op(user_args[0])(&stack, line_number, user_args);
 
 		free_string_array(user_args);
-		line_number++;
 	}
 
 	free(buffer);
