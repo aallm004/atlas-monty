@@ -15,6 +15,7 @@
 #include "../error.c"
 #include "../delete_node.c"
 #include "../add_node.c"
+#include "../_isspace.c"
 
 
 int main(void)
