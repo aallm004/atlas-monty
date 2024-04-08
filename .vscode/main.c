@@ -30,5 +30,6 @@ int main(void)
 	argv[0] = programName;
 	argv[1] = filename;
 	res = _main(argc, argv);
+	free(argv);
 	return (res);
 }

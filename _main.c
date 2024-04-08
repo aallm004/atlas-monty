@@ -48,7 +48,8 @@ int _main(int argc, char **argv)
 		bytes = getline(&buffer, &bufsize, file);
 		if (bytes == -1)
 			break;
-
+		if (strncmp(buffer, "\n", 1) == 0)
+			continue;
 		user_args = tokenize(buffer, " $\n");
 		if (user_args == NULL || user_args[0] == NULL)
 			continue;
